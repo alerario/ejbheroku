@@ -2,3 +2,10 @@ language: java
 jdk:
 - oraclejdk8
 script: mvn clean verify -DskipTests=false -DskipITs=false -DskipSTs=false
+deploy:
+  provider: heroku
+  api_key:
+    secure: rccpX+7EDXjKdlNr2gk8qX9MG3Y/f8MGYV7Jzrgu4X4voFJcqwjD5BzjklEYZ/083V58MJNVFXJxM5NxlEseq/Tc+vVVWAdONgaVJTHaYnQN2xEWdjaOGW5rXRyOsVT9d+OUjRsgRE44WNFS2uy1hPW1YBdV0w5KZr4OLN7x6W6fL4XkEl974oBFJ1QaSfUp3Iq5zwfy/ZTU+yhlqRL2SqOux9B5HJME69uI6CT0V5D+0SP0F2OOtXsrO9kalVd0S+Imh63fpV/ZGYHsknOeHTynWhL0ZbomCIXvtqHnNYScrrojwjNhYj9uB51SfkV+k1RJQ3B8K2MC+gGlHv/U2NBFiyPnRD58l8Y3RGGUQI1Xrv1RW0xKzwhCubIBz5gI+Zes6sy7sKB56F20jwNAYkptJm4Sx2K3F6bFmdBl7FB10PcSf9kXB5FPSvudhZkHhV5Rb7GkqZ1GulJqMFSj8VUGn4QeJ4/NjNZOAAI/pDVAsFUD9QJOi36EtvMI2AkFaeV/LD7nM5YMrUzRrlLa/hsPK4niuLQFj7k7kgWCyYHGbkLzLnLYK3NEhhTSyziRmwbjGC7RQhW4tmlv2helzW1N7GZt7xaDpYIhMdwAS6TQGVc6R78y9FnIQ3HLlZsLN1tD6pWd6gvsJ6vJzENvpRjOSH0mt4+6JH7rKGMf0NI=
+  app: ejbheroku
+  on:
+    repo: alerario/ejbheroku
