@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar target/endorsed/webapp-runner.jar --port $PORT mavenproject1-ear/target/*.ear
